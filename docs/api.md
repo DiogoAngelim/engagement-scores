@@ -1,5 +1,16 @@
 # Engagement Signal API Documentation
 
+## Score Configuration
+
+Engagement score calculation can be configured in [src/engagement.config.ts](src/engagement.config.ts). The main options are:
+
+- **weights**: Adjust the importance of each signal type (e.g., TASK_COMPLETION, SESSION_PARTICIPATION, etc.).
+- **windowDays**: The time window (in days) over which engagement is measured.
+- **thresholds**: Define the minimum number of events required and the score boundaries for each engagement status.
+- **decayHalfLifeDays**: Controls how quickly older events lose influence (recent behavior matters more).
+
+To change how scores are calculated, update these values in [src/engagement.config.ts](src/engagement.config.ts).
+
 ## Endpoints
 
 ### 1. Read Current Engagement Status
